@@ -20,11 +20,11 @@
 
 (def a-substitution
   (mount/substitute #'a
-                    (mount/state :start (create "a'" "start a'")
-                                 :stop  (destroy a "stop a'"))))
+                    (mount/state :start (create "b" "start b")
+                                 :stop  (destroy a "stop b"))))
 
 (defn info []
-  (println "current states:")
+  (println "current state:")
   (println "  a:" (:name a) (:id a)))
 
 (defn without-substitution []
